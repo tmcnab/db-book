@@ -1,4 +1,5 @@
 export enum TokenType {
+	COMMA,
 	CREATE,
 	FLOAT,
 	IDENTIFIER,
@@ -20,6 +21,7 @@ tokenTypeMap.set('[', TokenType.LBRACKET)
 tokenTypeMap.set(']', TokenType.RBRACKET)
 tokenTypeMap.set('{', TokenType.LBRACE)
 tokenTypeMap.set('}', TokenType.RBRACE)
+tokenTypeMap.set(',', TokenType.COMMA)
 tokenTypeMap.set('CREATE', TokenType.CREATE)
 tokenTypeMap.set('FLOAT', TokenType.FLOAT)
 tokenTypeMap.set('IDENTIFIER', TokenType.IDENTIFIER)
