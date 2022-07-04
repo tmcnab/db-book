@@ -1,0 +1,6 @@
+[book]
+authors = ["Tristan J. McNab"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Book"
