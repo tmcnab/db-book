@@ -5,8 +5,12 @@ I hate when media covering a topic starts out asking you to understand
 author. You can _probably_ skip this chapter if you're a big brain genius and
 already have a background in data structures.
 
+## CRUD
 
-## Concepts
+Every database does four things: **create** data, **read** data, **update** 
+data, and **destroy** data.
+
+## CompSci
 
 ### Data
 
@@ -59,3 +63,43 @@ fancier Set).
 	],
 }
 ```
+
+
+
+
+## ACID
+
+> In computer science, ACID (atomicity, consistency, isolation, durability) is
+> a set of properties of database transactions intended to guarantee data
+> validity despite errors, power failures, and other mishaps. In the context
+> of databases, a sequence of database operations that satisfies the ACID
+> properties (which can be perceived as a single logical operation on the
+> data) is called a transaction.
+
+### Atomicity
+TBA.
+
+### Consistency
+TBA.
+
+### Isolation
+TBA.
+
+### Durability
+TBA.
+
+## CAP
+
+Say you have a 
+
+### Consistency
+
+TBA.
+
+### Availability
+
+TBA.
+
+### Partition Tolerance
+
+TBA.
