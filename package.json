@@ -1,15 +1,4 @@
 {
-  "devDependencies": {
-    "assemblyscript": "^0.20.11",
-    "mocha": "^10.0.0"
-  },
   "private": true,
-  "scripts": {
-    "asbuild:debug": "asc assembly/index.ts --target debug --exportRuntime",
-    "asbuild:release": "asc assembly/index.ts --target release",
-    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
-    "pretest": "npm run asbuild:debug",
-    "test": "node test"
-  },
   "type": "module"
 }

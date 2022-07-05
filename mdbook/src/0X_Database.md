@@ -1,7 +1,14 @@
 # The System
 You probably know a database as a glob of things like tables, indexes, views,
 stored procedures and triggers. We don't care about this right now - all we 
-care about is putting data in, modfifying it and finding it.
+care about is putting data in, modfifying it and finding it. Our aim for this 
+project is the following:
+
+- Put in data
+- Pull out data
+- Make it fast
+- Make multiple instances sync up properly
+- We dont care about SQL
 
 ## Languages
 If you think of our database as a black box, we put something in, the black 

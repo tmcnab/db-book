@@ -1,0 +1,6 @@
+{
+	"scripts": {
+		"build": "mdbook build",
+		"serve": "mdbook serve --open"
+	}
+}
