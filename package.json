@@ -1,4 +1,6 @@
 {
-  "private": true,
-  "type": "module"
+	"scripts": {
+		"build": "mdbook build",
+		"serve": "mdbook serve --open"
+	}
 }
