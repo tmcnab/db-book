@@ -1,4 +1,4 @@
-# 04 Parsing
+# 03 Query Language
 
 Humans love reading and writing text but computers[^1] suck at it. Parsing is the process of turning one language into a representation we can more easily work with. 
 

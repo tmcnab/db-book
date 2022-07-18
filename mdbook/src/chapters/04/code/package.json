@@ -1,0 +1,6 @@
+{
+	"private": true,
+	"scripts": {
+		"test": "ts-node test/index.ts"
+	}
+}
