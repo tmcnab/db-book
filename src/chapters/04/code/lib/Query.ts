@@ -18,8 +18,7 @@ export class Query {
 
 	ast: Token[] = []
 
-	constructor (input: string) {
-		console.log('Query.constructor', input.length)
+	constructor(input: string) {
 		if (!input.length) return
 
 		this.ast = input.split(/\s+/).map<Token>(str => {
