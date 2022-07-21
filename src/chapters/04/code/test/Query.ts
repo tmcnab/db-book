@@ -9,10 +9,23 @@ export const queryNoTokensForNoInput = (test: testFn) => {
 
 export const querySelectSchema = (test: testFn) => {
 	const query = new Query('SELECT FROM schema')
-	test(query.ast.length === 3, 'ast should have three elements')
 	test(isEqual(query.ast, [
 		['KEYWORD', 'SELECT'],
 		['KEYWORD', 'FROM'],
-		['IDENTIFIER', 'schema']
+		['IDENTIFIER', 'schema'],
+	]), 'ast should have two keywords and an identifier')
+}
+
+export const queryUsingQuotes = (test: testFn) => {
+	const query = new Query(`INSERT [123, "John Citizen"] INTO users`)
+	test(isEqual(query.ast, [
+		[ 'KEYWORD', 'INSERT' ],
+		[ 'PUNCTUATION', '[' ],
+		[ 'VALUE', 123 ],
+		[ 'PUNCTUATION', ',' ],
+		[ 'VALUE', '"John Citizen"' ],
+		[ 'PUNCTUATION', ']' ],
+		[ 'KEYWORD', 'INTO' ],
+		[ 'IDENTIFIER', 'users' ]
 	]), 'ast should have two keywords and an identifier')
 }
