@@ -15,14 +15,13 @@ export enum Keyword {
 	RIGHT_BRACKET = ']',
 	SELECT = 'SELECT',
 	TRUE = 'TRUE',
+	TABLE = 'TABLE',
 	INTO = 'INTO',
 }
 
 export type TokenValue = boolean | null | number | string | Keyword
 
 export type Token = [TokenType, TokenValue]
-
-const regex = /(".*?"|\w+|\[|\]|,)/
 
 export class Query {
 
@@ -31,10 +30,11 @@ export class Query {
 	constructor(input: string) {
 		if (!input.length) return
 
-		const parts = input.normalize().split(regex)
+		const parts = input.normalize().replaceAll(/\s+/g, ' ').split(/(".*?"|\w+|\[|\]|,)/)
 		const items = parts.filter(item => item !== ' ')
 			.filter(item => item !== '')
-		this.ast = items.map<Token>(str => {
+		this.ast = items.map<Token>(str => 
+		{	
 			// Match keywords
 			switch (str.toUpperCase()) {
 				case ',':      return [TokenType.PUNCTUATION, Keyword.COMMA]
@@ -46,6 +46,7 @@ export class Query {
 				case 'INTO':   return [TokenType.KEYWORD, Keyword.INTO]
 				case 'SELECT': return [TokenType.KEYWORD, Keyword.SELECT]
 				case 'TRUE':   return [TokenType.VALUE, Keyword.TRUE]
+				case 'TABLE':  return [TokenType.KEYWORD, Keyword.TABLE]
 			}
 
 			// Match integer numbers
