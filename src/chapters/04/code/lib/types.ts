@@ -15,3 +15,7 @@ export type Attribute = [
 export type Data = Map<string, AttributeType[]>
 
 export type Schema = Map<string, Attribute[]>
+
+export type Statement = {
+	
+}

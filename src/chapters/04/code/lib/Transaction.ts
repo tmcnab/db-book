@@ -23,7 +23,13 @@ export class Transaction {
 	execute (schema: Schema, data: Data) : Result {
 		this.schema = schema
 		this.data = data
-		return new Result()
+		const result = new Result()
+
+		this.query?.ast.forEach((value, index) => {
+			console.log(value, index)
+		})
+
+		return result
 	}
 
 }

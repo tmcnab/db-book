@@ -1,3 +1,5 @@
+import { Statement } from "./types"
+
 export const enum TokenType {
 	IDENTIFIER = 'IDENTIFIER',
 	KEYWORD = 'KEYWORD',
@@ -74,6 +76,20 @@ export class Query {
 			// No matches!
 			return [TokenType.UNKNOWN, str]
 		})
+	}
+
+	get errors () : Error[] {
+		return []
+	}
+
+	get tokens () : Token[] {
+		return this.ast
+	}
+
+	get statements () : Statement[] {
+		const items: Statement[] = []
+
+		return items
 	}
 
 }
