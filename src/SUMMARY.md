@@ -6,3 +6,4 @@
 - [A Simple Database]()
   - [Introduction](./chapters/04/introduction.md)
   - [Project Structure](./chapters/04/project_structure.md)
+  - [The Database](./chapters/04/the_database.md)
