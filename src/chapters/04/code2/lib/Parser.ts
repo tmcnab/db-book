@@ -1,18 +1,16 @@
 export namespace Parser {
 
 	export enum Keyword {
+		ADD       = 'ADD',
+		ATTRIBUTE = 'ATTRIBUTE',
 		BOOLEAN   = 'BOOLEAN',
-		CREATE    = 'CREATE',
 		FALSE     = 'FALSE',
-		FROM      = 'FROM',
 		NULL      = 'NULL',
 		NUMBER    = 'NUMBER',
-		SELECT    = 'SELECT',
+		RELATION  = 'RELATION',
+		REMOVE    = 'REMOVE',
 		STRING    = 'STRING',
-		TABLE     = 'TABLE',
 		TRUE      = 'TRUE',
-		VIEW      = 'VIEW',
-		WHERE     = 'WHERE',
 	}
 
 	export enum Operator {
@@ -20,18 +18,10 @@ export namespace Parser {
 		NOT_EQUAL = '≠',
 	}
 
-	export enum Punctuation {
-		LEFT_PAREN  = '(',
-		RIGHT_PAREN = ')',
-		SEMICOLON   = ';',
-		COMMA       = ',',
-	}
-
 	export enum Type {
 		IDENTIFIER  = 'IDENTIFIER',
 		KEYWORD     = 'KEYWORD',
 		OPERATOR    = 'OPERATOR',
-		PUNCTUATION = 'PUNCTUATION',
 		UNKNOWN     = 'UNKNOWN',
 		VALUE       = 'VALUE',
 	}
@@ -96,19 +86,8 @@ export namespace Parser {
 		return false
 	}
 
-	export const matchedPunctuation = (input: string, tokens: Token[]): boolean => {
-		const matched = Object.values(Punctuation).some(value => value === input)
-
-		if (matched) {
-			tokens.push([Type.PUNCTUATION, input as unknown as Punctuation])
-			return true
-		}
-
-		return false
-	}
-	
 	export const parse = (input: string) : Parser.Token[] => {
-		const elements = input.split(/\s+/gmi)
+		const elements = input.split(/\s+/gmi).filter((value) => value.length > 0)
 		const tokens: Parser.Token[] = []
 		
 		for (let index = 0; index < elements.length; index += 1) {
@@ -118,7 +97,6 @@ export namespace Parser {
 			if (matchedNumber(element, tokens))      continue
 			if (matchedKeyword(element, tokens))     continue
 			if (matchedIdentifier(element, tokens))  continue
-			if (matchedPunctuation(element, tokens)) continue
 			
 			tokens.push([Parser.Type.UNKNOWN, element])
 		}
