@@ -13,6 +13,15 @@ const createRelation = `
 		id       NUMBER
 		verified BOOLEAN`
 
+const queryIndividualAttributes = `
+	SELECT 
+		email, id
+	FROM ATTRIBUTE
+		users
+	WHERE
+		id = 5
+`
+
 export const TEST_STATMENTS = {
 	addAttributeToRelation,
 	createRelation,
