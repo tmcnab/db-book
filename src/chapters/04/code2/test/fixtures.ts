@@ -1,3 +1,5 @@
+import { Storage } from '../lib/Schema'
+
 const addAttributeToRelation = `
 	ADD ATTRIBUTE 
 		visited BOOLEAN
@@ -25,4 +27,20 @@ const queryIndividualAttributes = `
 export const TEST_STATMENTS = {
 	addAttributeToRelation,
 	createRelation,
+}
+
+export namespace SCHEMA_TEST {
+
+	import Attribute = Storage.Schema.Attribute
+
+	export const createEmptyRelations = () => Object.create(null)
+
+	export const createSimpleRelations = () => {
+		const output = createEmptyRelations()
+		output['users'] = []
+		return output
+	}
+
+	export const ATTRIBUTE_ID = { name: 'id', nullable: false, type: Attribute.Type.NUMBER }
+
 }
