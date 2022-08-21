@@ -104,5 +104,14 @@ export namespace Parser {
 		return tokens
 	}
 
+	export const validate = (input: Parser.Token[]) : Error | null => {
+		input.forEach((value, index, array) => {
+			const [type, arg] = value
+			
+
+		})
+
+		return null
+	} 
 }
 

@@ -13,7 +13,7 @@ end
 Input --> Parser
 
 subgraph Parser
-	Tokenizer --> Syntax-Validator
+	Tokenizer --> Validator/Transformer
 end
 
 Parser --> Planner
