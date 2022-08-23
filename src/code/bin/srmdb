@@ -1,2 +1,0 @@
-#!/usr/bin/env node
-const mod = require('../lib/index')

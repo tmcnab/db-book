@@ -1,9 +1,0 @@
-{
-	"devDependencies": {
-		"ts-node": "^10.9.1"
-	},
-	"private": true,
-	"scripts": {
-		"test": "ts-node test/index.ts"
-	}
-}
