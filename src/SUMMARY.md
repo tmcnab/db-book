@@ -10,6 +10,8 @@
   - [CAP](chapters/02/CAP.md)
   - [SQL](chapters/02/SQL.md)
 - [Query Language](./03_Query_Language.md)
+  - [Introduction](chapters/Parsing/introduction.md)
+  - [Tokenization](chapters/Parsing/tokenization.md)
 - [A Simple Database]()
   - [Introduction](./chapters/04/introduction.md)
   - [Project Structure](./chapters/04/project_structure.md)
