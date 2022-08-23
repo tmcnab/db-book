@@ -1,47 +1,5 @@
-# Theory
+# Data & Types
 
-I hate when media covering a topic starts out asking you to understand 
-"theory" and "concepts" when I just want to get to coding alongside the 
-author. You can _probably_ skip this chapter if you're a big brain genius and
-already have a background in computer science but if that's the case why are 
-you reading this book.
-
-## CRUD
-
-Every database does four things: **create** data, **read** data, **update** 
-data, and **destroy** data - also known as **CRUD**. You put data in, you pull
-data out.
-
-## ACID & CAP
-
-> In computer science, ACID (atomicity, consistency, isolation, durability) is
-> a set of properties of database transactions intended to guarantee data
-> validity despite errors, power failures, and other mishaps. In the context
-> of databases, a sequence of database operations that satisfies the ACID
-> properties (which can be perceived as a single logical operation on the
-> data) is called a transaction.
-
-### Atomicity
-TBA.
-
-### Consistency
-TBA.
-
-### Isolation
-TBA.
-
-### Durability
-TBA.
-
-### Availability
-
-TBA.
-
-### Partition Tolerance
-
-TBA.
-
-## Structures
 
 ### Data
 
